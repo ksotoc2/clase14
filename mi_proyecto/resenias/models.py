@@ -11,8 +11,8 @@ class Libro(models.Model):
         return self.titulo
 
 # Modelo de Reseña
-class Reseña(models.Model):
-    libro = models.ForeignKey(Libro, on_delete=models.CASCADE, related_name='reseñas')
+class Resenia(models.Model):
+    libro = models.ForeignKey(Libro, on_delete=models.CASCADE, related_name='resenias')
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     contenido = models.TextField()
     puntuacion = models.PositiveIntegerField(default=3)

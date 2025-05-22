@@ -1,9 +1,9 @@
 from django import forms
-from .models import Reseña, Libro
+from .models import Resenia, Libro
 
-class ReseñaForm(forms.ModelForm):
+class ReseniaForm(forms.ModelForm):
     class Meta:
-        model = Reseña
+        model = Resenia
         fields = ['contenido', 'puntuacion']
         widgets = {
             'contenido': forms.Textarea(attrs={'rows': 4}),
